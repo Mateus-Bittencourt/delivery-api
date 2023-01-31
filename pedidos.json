@@ -1,5 +1,5 @@
 {
-  "nextId": 502,
+  "nextId": 505,
   "pedidos": [
     {
       "id": 1,
@@ -3995,11 +3995,28 @@
       "timestamp": "2021-05-02T19:48:09.767Z"
     },
     {
-      "id": 501,
-      "cliente": "Mateus B",
-      "produto": "Esfirra de calabresa",
-      "valor": "15",
-      "timestamp": "2023-01-31T11:36:20.146Z"
+      "id": 502,
+      "cliente": "Mateus Bittencourt",
+      "produto": "Esfirra",
+      "valor": 10,
+      "entregue": false,
+      "timestamp": "2023-01-31T14:18:21.534Z"
+    },
+    {
+      "id": 503,
+      "cliente": "Mateus Bittencourt",
+      "produto": "Esfirra",
+      "valor": 15,
+      "entregue": true,
+      "timestamp": "2023-01-31T14:18:38.571Z"
+    },
+    {
+      "id": 504,
+      "cliente": "Mateus Bittencourt",
+      "produto": "Esfirra",
+      "valor": 5,
+      "entregue": true,
+      "timestamp": "2023-01-31T14:18:49.888Z"
     }
   ]
 }
