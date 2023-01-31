@@ -1,0 +1,25 @@
+{
+  "name": "delivery-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mateus-Bittencourt/delivery-api.git"
+  },
+  "keywords": [],
+  "author": "Mateus Bittencourt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mateus-Bittencourt/delivery-api/issues"
+  },
+  "homepage": "https://github.com/Mateus-Bittencourt/delivery-api#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  },
+  "type": "module"
+}
