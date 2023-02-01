@@ -122,19 +122,21 @@ const getOrderSumByProduct = async (req, res, next) => {
 const getTopSellingProducts = async (req, res, next) => {
   try {
     const orders = await OrderRepository.getOrders();
-    const products = orders.reduce((acc, order) => {
-      if(!order.produto) return acc;
-      if (order.entregue) {
-        acc[order.produto] = acc[order.produto] ? acc[order.produto] + 1 : 1;
+    const products = [];
+    orders.forEach(order => {
+      const index = products.findIndex(p => p.produto === order.produto);
+      if(order.entregue){
+        if (index >= 0) {
+          products[index].quantidade += 1;
+        } else {
+          products.push({ produto: order.produto, quantidade: 1 });
+        }
       }
-      return acc;
-    }, {});
-    const topProducts = Object.keys(products).sort((a, b) => products[b] - products[a]).slice(0, 5);
-    res.status(200).send(topProducts);
-    console.log(`GET /pedidos/top-products - ${JSON.stringify(topProducts)}`);
+    });
 
-  } catch (error) {
-    next(error);
+    res.status(200).send(products.sort((a, b) => b.quantidade - a.quantidade));
+  } catch (err) {
+    next(err);
   }
 };
 
